@@ -12,7 +12,9 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return days * DAY_COST - LONG_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
+  }
+
+  if (days >= SHORT_TERM) {
     return days * DAY_COST - SHORT_TERM_DISCOUNT;
   }
 
